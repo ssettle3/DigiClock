@@ -6,44 +6,33 @@ var time = function() {
 
 	var today = new Date();
 
-	var h = today.getHours().toString();
-	var m = today.getMinutes().toString();
-	var s = today.getSeconds().toString();
-	var amPM = "";
+	var h = today.getHours();
+	var m = today.getMinutes();
+	var s = today.getSeconds();
 
-	if(h.length < 2){
+	if(h < 10){
 		h = "0" + h;
 	} else{
 		h = h;
 	}
 
-	if(m.length < 2){
+	if(m < 10){
 		m = "0" + m;
 	} else{
 		m = m;
 	}
 
-	if(s.length < 2){
+	if(s < 10){
 		s = "0" + s;
 	} else {
 		s = s;
 	}
 
-	if(h < 12){
-		amPM = "AM";
-	} else{
-		amPM = "PM";
-	}
 
-	if(h > 12){
-		h = h - 12;
-	} else {
-		h = h;
-	}
+	clock.innerText = "#" + h + m + s;
 
-
-	clock.innerText = h + ":" + m + ":" + s + " " + amPM;
-
+	var bgColor = "#" + h + m + s;
+	document.body.style.background = bgColor;
 
 }
 
