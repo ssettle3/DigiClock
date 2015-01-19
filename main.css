@@ -1,3 +1,6 @@
+body{
+	background-color: black;
+}
 .container{
 	background-color: black;
 	height: 700px;
@@ -11,7 +14,9 @@
 	margin-top: 100px;
 	padding-top: 200px;
 	margin: 0 auto;
+	border-bottom: 5px solid yellow;
 }
+
 img{
 	margin-left: 40%;
 }

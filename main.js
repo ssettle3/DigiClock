@@ -11,6 +11,12 @@ var time = function() {
 	var s = today.getSeconds().toString();
 	var amPM = "";
 
+	if(h.length < 2){
+		h = "0" + h;
+	} else{
+		h = h;
+	}
+
 	if(m.length < 2){
 		m = "0" + m;
 	} else{
